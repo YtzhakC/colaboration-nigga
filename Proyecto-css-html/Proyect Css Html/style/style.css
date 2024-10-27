@@ -1,5 +1,5 @@
-* {
-    box-sizing: border-box;
+* { 
+    box-sizing: border-box; 
 }
 @font-face {
     font-family: "anybody";
@@ -16,90 +16,108 @@
     src: url(../font/GulfsDisplay-SemiExpanded.ttf);
 }
 
+@keyframes rotar {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 body {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 40vw 100vw 80vw 80vw 60vw 10vw;
+    grid-template-rows: 45.5vw 100vw 80vw 80vw 60vw 10vw;
     margin: 0;
     padding: 0;
-    
+    position: relative;
 
 }
-ul{
-    list-style-type: none;
-}
+
 header{
     grid-column: 1/span 8;
     grid-row: 1/ span 1;
-    border: 2px solid black;
+    border-bottom: 2px solid black;
     background-color: #ffb4cc;
     position: relative; 
 
    
 }
-
-ul li{
-    display: inline;
-    margin: 10px;
+ul {
+    display: flex; 
+    padding: 0; 
+    margin: 0; 
+    list-style-type: none;
 }
 
-.menu{
-    position:relative;
+ul li {
+    margin: 0 10px; 
+    display: flex; 
+    align-items: center; 
+}
+
+
+.menu {
+    width: 100%;
     display: flex;
     justify-content: flex-end;
-    height: 10%;
-    align-items: center;
-    padding-bottom: 0.2%;
+    height: 15%;
     font-family: "gulfs";
-    padding-right: 3%;
-    font-size: 1vw;
-    border: 2px solid green;
+    font-size: 1.5vw;
+    border: 0.4px solid green;
+    position: relative;
+    top: -5%;
 }
+
+
+
 
 #uno {
-    width: 4%;
+    width: 3vw;
     position: relative;
-    top: 2px;
-    margin-right:10px ;
-    
+    margin-right:10%;
+    margin-left: 0%;
+    /*! top: 8px; */
 }
 #dos {
-    width: 4%;
+    width: 3.4vw;
     position: relative;
-    top: 8px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 5%;
+    margin-right: 9%;
+    /*! top: 15px; */
 }
 #tres {
-    width: 4%;
+    width: 2vw;
     position: relative;
-    top: 8px;
     margin-left: 10px;
     margin-right: 10px;
+    /*! top: 10px; */
 }
 #cuatro {
-    width: 4%;
+    width: 3vw;
     position: relative;
-    top: 8px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 3%;
+    /*! margin-right: 2.5%; */
+    /*! top: 3.4%; */
 }
 
+
 .texto{
+    position: relative;
     text-align: center;
     color: #045cfc;
     font-family: "gulfs";
-    font-size:1.5vw;
+    font-size:2.25vw;
     line-height:0.9;
     z-index: 4; 
-    position: relative;
-
+    bottom: 1%;
 }
 
 .img{
-    border: 2px solid red;
+    border: 0.4px solid red;
     position: relative;
-    bottom: 15%;
+    bottom: 28%;
     height: 140%;    
     
 
@@ -109,15 +127,15 @@ ul li{
     justify-content: flex-end;
     position: relative;
     right: 4%;
-    border: 2px solid black;
+    
     
 
 }
 .imagenDer img{
     position: relative;
-    width: 10%;
+    width: 16%;
     border: 2px solid black;
-    border-radius: 250px;
+    border-radius: 10%;
     
 }
 
@@ -125,18 +143,110 @@ ul li{
     display: flex;
     justify-content: center;
     position: relative;
-    bottom: 20%;
-    border:2px solid black;
+    bottom: 22.5%;
+    border:0.4px solid black;
     height: 100%;
     
 
 }
 .imgCenter img{
-    width: 30%;
+    width: 36%;
     border: 2px solid black;
     border-radius: 38%;
     height: 90%;
     
+}
+
+.imagenIzq img {
+    border: 2px solid black;
+    width: 25%;
+    border-radius: 10%;
+    
+}
+
+.imagenIzq {
+    position: relative;
+    bottom: 111%;
+}
+
+.estrella-1 img {
+    width: 3%;
+    
+}
+
+.estrella-1 {
+    
+    display: flex;
+    position: relative;
+    justify-content: center;
+    bottom: 164%;
+    right: 20%;
+}
+
+.estrella-2 img {
+    width: 1.4%;
+    
+}
+.estrella-2{
+    
+    display: flex;
+    position: relative;
+    bottom: 191%;
+    justify-content: center;
+    right: 22%;
+
+}
+.estrella-3 img {
+    width: 1.4%;
+    
+}
+.estrella-3{
+    
+    display: flex;
+    position: relative;
+    bottom: 175%;
+    justify-content: flex-end;
+    right: 30%;
+    
+}
+
+.estrellaAzul img {
+    width: 10%;
+    animation: rotar 5s linear infinite;
+   
+}
+.estrellaAzul {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    right: 18%;
+    bottom: 157%;
+    
+}
+
+.rayo img {
+    width: 7%;
+}
+
+.rayo {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    right: 17%;
+    bottom: 195% ;
+}
+
+.caraFeliz img {
+    width: 12.5%;
+    animation: rotar 5s linear infinite;
+}
+
+.caraFeliz {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    right: 15%;
+    bottom: 180% ;
 }
 
 /* ____________________________________________________________ */
@@ -144,7 +254,7 @@ ul li{
 .nosotros{
     grid-column: 1/span 8;
     grid-row: 2/span 1;
-    border: 2px solid black;
+    
     background-color: #fff45c;
 }
 
@@ -153,19 +263,104 @@ ul li{
 .galeria{
     grid-column: 1/span 8;
     grid-row: 3/span 1;
-    border: 2px solid black;
+    
     background-color: #fc6734;
 }
 
 .precio{
     grid-column: 1/span 8;
     grid-row: 4/span 1;
-    border: 2px solid black;
+    
 
 }
 .contacto{
     grid-column: 1/span 8;
     grid-row: 5/span 2;
-    border: 2px solid black;
+    
     background-color: #ffb4cc;
 }
+
+
+
+
+
+/*--------------------------------------------Responsive 768max-----------------------------*/
+
+@media (max-width: 768px) {
+    .imagenDer, .imagenIzq {
+        display: none; 
+    }
+    
+    
+    .imgCenter{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top:5%;
+        border:0.4px solid black;
+        height: 100%;
+        
+    
+    }
+    .imgCenter img{
+        width: 37%;
+        border: 0.4px solid black;
+        border-radius: 34%;
+        height: 90%;
+        
+    }
+     
+  
+    .estrella-1 img {
+        width: 3.5%;
+        border: 0.4px solid black;
+    }
+    
+    .estrella-1 {
+        border: 0.4px solid black;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        bottom: 175%;
+        right: 20%;
+    }
+    
+    .estrella-2 img {
+        width: 4.5%;
+        border: 0.4px solid black;
+    }
+    .estrella-2{
+        border: 0.4px solid black;
+        display: flex;
+        position: relative;
+        bottom: 90%;
+        justify-content: center;
+        right: 23.4%;
+    
+    }
+    .estrella-3 img {
+        width: 2.7%;
+        border: 0.4px solid black;
+    }
+    .estrella-3{
+        border: 0.4px solid black;
+        display: flex;
+        position: relative;
+        bottom: 90%;
+        justify-content: flex-end;
+        right: 20%;
+        
+    }
+    .texto {
+        position: relative !important;
+        text-align: center;
+        color: #045cfc;
+        font-family: "gulfs";
+        font-size: 3vw;
+        line-height: 0.9;
+        bottom:6%;
+    }   
+
+
+}
+
