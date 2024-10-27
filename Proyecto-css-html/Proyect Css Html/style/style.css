@@ -249,6 +249,17 @@ ul li {
     bottom: 180% ;
 }
 
+.separador img {
+    width: 3%;
+}
+
+.separador {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    right: 5%;
+    bottom: 135% ;
+}
 /* ____________________________________________________________ */
 
 .nosotros{
@@ -279,6 +290,7 @@ ul li {
     
     background-color: #ffb4cc;
 }
+
 
 
 
